@@ -1,0 +1,21 @@
+{
+  "name": "canvasjsDirective",
+  "main": "canvasjsDirective.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wojciechAdaszynski/canvasjsDirective",
+  "authors": [
+    "Wojciech A. <wojciech.adaszynski@gmail.com>"
+  ],
+  "description": "canvasjs custom directive",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.3"
+  }
+}
