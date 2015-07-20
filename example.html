@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CanvasJS Directive example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+	<script src="canvasjs/canvasjs.min.js"></script>
+	<script src="canvasjsDirective.js"></script>
+</head>
+<body ng-app="ExampleApp">
+<div ng-controller="MainController">
+	<canvasjs-plot conf="config"></canvasjs-plot>
+	<b>Dynamic binding with config object.</b>
+	<input type="text" ng-model="config.title.text">
+</div>
+	<script>
+		angular.module('ExampleApp', ['canvasjsDirective'])
+			.controller('MainController', function ($scope) {
+				$scope.config = {
+			        title: {
+			            text: "Example of Line chart"
+			        },
+			        data: [
+			            {
+			                type: "line",
+			                dataPoints: [
+			                	{x: 1, y: 0.123},
+			                	{x: 2, y: 1.23},
+			                	{x: 3, y: -12.1},
+			                	{x: 4, y: 2.55},
+			                	{x: 5, y: 1.23}
+			                ]
+			            }
+			        ]
+			    };		
+			});
+	</script>
+</body>
+</html>
